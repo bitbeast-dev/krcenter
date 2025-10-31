@@ -85,12 +85,12 @@ const HomePage = () => {
   ];
 
   const testimonials = [
-    { name: "Sarah Johnson", text: "Kigali Revision Center's tutoring program helped my daughter improve her math grades from C to A+ in just 3 months!", avatar: "/1.png", role: "Parent", company: "Primary Student" },
-    { name: "Michael Chen", text: "The TOEFL preparation course was excellent. I achieved my target score and got accepted to my dream university!", avatar: "/2.png", role: "Student", company: "University Applicant" },
-    { name: "Emma Rodriguez", text: "Piano lessons with Kigali Revision Center were amazing. My son now plays beautifully and loves music more than ever!", avatar: "/3.png", role: "Parent", company: "Music Student" },
-    { name: "David Kim", text: "The counseling sessions helped me choose the right career path. I'm now confident about my future!", avatar: "/4.png", role: "Student", company: "High School" },
-    { name: "Lisa Thompson", text: "Home schooling support made our educational journey smooth and effective. Highly recommended!", avatar: "/5.png", role: "Parent", company: "Home School" },
-    { name: "James Wilson", text: "Art classes unleashed my creativity. I'm now pursuing graphic design thanks to Kigali Revision Center!", avatar: "/6.png", role: "Student", company: "Creative Arts" }
+    { name: "Fabien Miguel", text: "Kigali Revision Center's tutoring program helped my daughter improve her math grades from C to A+ in just 3 months!", avatar: "/1.png", role: "Parent", company: "Primary Student" },
+    { name: "Tuyizere Honore", text: "The TOEFL preparation course was excellent. I achieved my target score and got accepted to my dream university!", avatar: "/2.png", role: "Student", company: "University Applicant" },
+    { name: "Ineza Irene", text: "Piano lessons with Kigali Revision Center were amazing. My son now plays beautifully and loves music more than ever!", avatar: "/3.png", role: "Parent", company: "Music Student" },
+    { name: "Anitha Keza", text: "The counseling sessions helped me choose the right career path. I'm now confident about my future!", avatar: "/4.png", role: "Student", company: "High School" },
+    { name: "Mutoni Kelia", text: "Home schooling support made our educational journey smooth and effective. Highly recommended!", avatar: "/5.png", role: "Parent", company: "Home School" },
+    { name: "Akeza ynes", text: "Art classes unleashed my creativity. I'm now pursuing graphic design thanks to Kigali Revision Center!", avatar: "/6.png", role: "Student", company: "Creative Arts" }
   ];
 
   const faqs = [
@@ -382,12 +382,12 @@ const HomePage = () => {
         {/* Detailed Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
-            { id: 1, title: "Primary School Mathematics", description: "Comprehensive math tutoring for elementary students covering arithmetic, geometry, and problem-solving", category: "Tutoring", level: "Primary", students: 247, rating: 4.9, price: "$25/hour", instructor: "Sarah Mitchell", sessions: "Weekly", subjects: ["Arithmetic", "Geometry", "Word Problems", "Basic Algebra"], icon: GraduationCap },
-            { id: 2, title: "TOEFL Preparation Course", description: "Intensive TOEFL preparation with practice tests, speaking sessions, and writing workshops", category: "Language Tests", level: "Advanced", students: 193, rating: 4.8, price: "$40/hour", instructor: "Dr. Michael Chen", sessions: "3x per week", subjects: ["Reading", "Listening", "Speaking", "Writing"], icon: Languages },
-            { id: 3, title: "Piano Lessons for Beginners", description: "Learn piano fundamentals, music theory, and play your favorite songs", category: "Creative Skills", level: "Primary", students: 156, rating: 4.7, price: "$30/hour", instructor: "Emma Rodriguez", sessions: "Weekly", subjects: ["Music Theory", "Technique", "Repertoire", "Performance"], icon: Music },
-            { id: 4, title: "High School Science Tutoring", description: "Physics, Chemistry, and Biology tutoring for secondary school students", category: "Tutoring", level: "Secondary", students: 98, rating: 4.9, price: "$35/hour", instructor: "David Kim", sessions: "2x per week", subjects: ["Physics", "Chemistry", "Biology", "Lab Work"], icon: Award },
-            { id: 5, title: "Art & Design Workshop", description: "Develop artistic skills through drawing, painting, and digital design projects", category: "Creative Skills", level: "All", students: 76, rating: 4.8, price: "$28/hour", instructor: "Lisa Wang", sessions: "Weekly", subjects: ["Drawing", "Painting", "Digital Art", "Portfolio"], icon: Palette },
-            { id: 6, title: "Student Academic Counseling", description: "Academic planning, study skills, and career guidance for students", category: "Counseling", level: "All", students: 142, rating: 4.6, price: "$45/hour", instructor: "James Wilson", sessions: "Bi-weekly", subjects: ["Study Skills", "Goal Setting", "Career Planning", "Motivation"], icon: Users }
+            { id: 1, title: "Primary School Mathematics", description: "Comprehensive math tutoring for elementary students covering arithmetic, geometry, and problem-solving", category: "Tutoring", level: "Primary", students: 247, rating: 4.9, price: "$25/hour", instructor: "Tuyizere Honore", sessions: "Weekly", subjects: ["Arithmetic", "Geometry", "Word Problems", "Basic Algebra"], icon: GraduationCap },
+            { id: 2, title: "TOEFL Preparation Course", description: "Intensive TOEFL preparation with practice tests, speaking sessions, and writing workshops", category: "Language Tests", level: "Advanced", students: 193, rating: 4.8, price: "$40/hour", instructor: "Mwiza Bruce", sessions: "3x per week", subjects: ["Reading", "Listening", "Speaking", "Writing"], icon: Languages },
+            { id: 3, title: "Piano Lessons for Beginners", description: "Learn piano fundamentals, music theory, and play your favorite songs", category: "Creative Skills", level: "Primary", students: 156, rating: 4.7, price: "$30/hour", instructor: "Emma Halleluah", sessions: "Weekly", subjects: ["Music Theory", "Technique", "Repertoire", "Performance"], icon: Music },
+            { id: 4, title: "High School Science Tutoring", description: "Physics, Chemistry, and Biology tutoring for secondary school students", category: "Tutoring", level: "Secondary", students: 98, rating: 4.9, price: "$35/hour", instructor: "David Irafasha", sessions: "2x per week", subjects: ["Physics", "Chemistry", "Biology", "Lab Work"], icon: Award },
+            { id: 5, title: "Art & Design Workshop", description: "Develop artistic skills through drawing, painting, and digital design projects", category: "Creative Skills", level: "All", students: 76, rating: 4.8, price: "$28/hour", instructor: "Isimbi Michelline", sessions: "Weekly", subjects: ["Drawing", "Painting", "Digital Art", "Portfolio"], icon: Palette },
+            { id: 6, title: "Student Academic Counseling", description: "Academic planning, study skills, and career guidance for students", category: "Counseling", level: "All", students: 142, rating: 4.6, price: "$45/hour", instructor: "Danika Kebizano", sessions: "Bi-weekly", subjects: ["Study Skills", "Goal Setting", "Career Planning", "Motivation"], icon: Users }
           ].filter(service => {
             const categoryMatch = selectedCategory === "All" || service.category === selectedCategory;
             const levelMatch = selectedLevel === "All" || service.level === selectedLevel || service.level === "All";
