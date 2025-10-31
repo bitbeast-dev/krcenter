@@ -130,9 +130,16 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               {/* Logo */}
-              <div className="flex items-center">
-                <img src="/kigali__.png" alt="Kigali Revision Center" className="w-24 h-12 object-cover"/>
-                <h1 className="text-white">Kigali Revision center</h1>
+              <div className="flex items-center space-x-3">
+                <img src="/kigali__.png" alt="Kigali Revision Center" className="w-16 h-16 object-cover rounded-lg"/>
+                <div className="flex flex-col">
+                  <h1 className="text-white font-bold text-xl bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+                    KIGALI REVISION CENTER
+                  </h1>
+                  <p className="text-gray-300 text-xs font-medium tracking-wide">
+                    Excellence in Education
+                  </p>
+                </div>
               </div>
 
               {/* Desktop Menu */}
