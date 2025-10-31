@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -14,7 +15,7 @@ import { ArrowRight, BookOpen, Users, Award, Clock, Globe, Star, GraduationCap, 
 
 import Link from "next/link";
 
-const page = () => {
+const HomePage = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [activeFeature, setActiveFeature] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -39,7 +40,7 @@ const page = () => {
       clearInterval(slideInterval);
       clearInterval(featureInterval);
     };
-  }, []);
+  }, [heroImages.length]);
 
   const features = [
     { icon: GraduationCap, title: "Expert Tutoring", description: "Qualified teachers for all subjects" },
@@ -124,10 +125,12 @@ const page = () => {
                 activeSlide === index ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              <img
+              <Image
                 src={image}
                 alt={`Education slide ${index + 1}`}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                priority={index === 0}
               />
               <div className="absolute inset-0 bg-black/40" />
             </div>
@@ -230,7 +233,7 @@ const page = () => {
           ].map((item) => (
             <Card key={item.id} className="bg-white/10 backdrop-blur-sm border-yellow-400/30 hover:scale-105 transition-transform duration-300 overflow-hidden group">
               <div className="relative h-64 overflow-hidden">
-                <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                <Image src={item.image} alt={item.title} fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <Users className="w-12 h-12 text-yellow-400" />
                 </div>
@@ -465,7 +468,7 @@ const page = () => {
                       <p className="text-gray-400 text-xs">{testimonial.company}</p>
                     </div>
                   </div>
-                  <p className="text-gray-300 italic">"{testimonial.text}"</p>
+                  <p className="text-gray-300 italic">&ldquo;{testimonial.text}&rdquo;</p>
                   <div className="flex mt-4">
                     {[1, 2, 3, 4, 5].map((star) => (
                       <Star key={star} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -612,4 +615,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default HomePage;
