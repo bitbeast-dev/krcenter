@@ -330,7 +330,7 @@ export default function RootLayout({
             {/* Copyright */}
             <div className="border-t border-yellow-400/20 mt-8 pt-6 text-center">
               <p className="text-gray-400 text-sm">
-                © 2024 Kigali Revision Center. All rights reserved.
+                © 2025 Kigali Revision Center. All rights reserved.
               </p>
             </div>
           </div>
