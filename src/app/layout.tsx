@@ -127,16 +127,16 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
         <nav className="bg-transparent backdrop-blur-md sticky top-0 z-50 border-b border-yellow-400/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+            <div className="flex items-center justify-between h-14 sm:h-16">
               {/* Logo */}
-              <div className="flex items-center space-x-3">
-                <img src="/kigali__.png" alt="Kigali Revision Center" className="w-16 h-16 object-cover rounded-lg"/>
-                <div className="flex flex-col">
-                  <h1 className="text-white font-bold text-xl bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+              <div className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+                <img src="/kigali__.png" alt="Kigali Revision Center" className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 object-cover rounded-lg"/>
+                <div className="flex flex-col min-w-0">
+                  <h1 className="text-white font-bold text-xs sm:text-sm md:text-lg lg:text-xl bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent leading-tight truncate">
                     KIGALI REVISION CENTER
                   </h1>
-                  <p className="text-gray-300 text-xs font-medium tracking-wide">
+                  <p className="text-gray-300 text-[10px] sm:text-xs font-medium tracking-wide hidden sm:block">
                     Excellence in Education
                   </p>
                 </div>
@@ -171,28 +171,28 @@ export default function RootLayout({
               </div>
 
               {/* Language Selector & CTA Button */}
-              <div className="hidden md:flex items-center space-x-4">
+              <div className="hidden lg:flex items-center space-x-3 xl:space-x-4">
                 <div className="relative translate-dropdown">
                   <button
                     onClick={() => setIsTranslateOpen(!isTranslateOpen)}
-                    className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-yellow-400/30 rounded-lg px-3 py-2 text-white hover:bg-yellow-400/20 transition-all"
+                    className="flex items-center space-x-1 xl:space-x-2 bg-white/10 backdrop-blur-sm border border-yellow-400/30 rounded-lg px-2 xl:px-3 py-1.5 xl:py-2 text-white hover:bg-yellow-400/20 transition-all"
                   >
-                    <Globe className="w-4 h-4 text-yellow-400" />
-                    <span className="text-sm font-medium">Language</span>
-                    <ChevronDown className="w-4 h-4" />
+                    <Globe className="w-3 xl:w-4 h-3 xl:h-4 text-yellow-400" />
+                    <span className="text-xs xl:text-sm font-medium hidden xl:inline">Language</span>
+                    <ChevronDown className="w-3 xl:w-4 h-3 xl:h-4" />
                   </button>
                   {isTranslateOpen && (
-                    <div className="absolute top-full mt-2 right-0 bg-black/90 backdrop-blur-md border border-yellow-400/30 rounded-lg shadow-lg min-w-[180px] z-50">
-                      <div className="flex items-center justify-between p-3 border-b border-yellow-400/20">
-                        <span className="text-white text-sm font-medium">Select Language</span>
+                    <div className="absolute top-full mt-2 right-0 bg-black/95 backdrop-blur-md border border-yellow-400/30 rounded-lg shadow-xl min-w-[160px] xl:min-w-[180px] z-50">
+                      <div className="flex items-center justify-between p-2 xl:p-3 border-b border-yellow-400/20">
+                        <span className="text-white text-xs xl:text-sm font-medium">Select Language</span>
                         <button
                           onClick={() => setIsTranslateOpen(false)}
                           className="text-gray-400 hover:text-white transition-colors"
                         >
-                          <X className="w-4 h-4" />
+                          <X className="w-3 xl:w-4 h-3 xl:h-4" />
                         </button>
                       </div>
-                      <div className="p-2 space-y-1">
+                      <div className="p-1 xl:p-2 space-y-1">
                         {languages.map((lang) => (
                           <button
                             key={lang.code}
@@ -205,10 +205,10 @@ export default function RootLayout({
                               setCurrentLang(lang.name);
                               setIsTranslateOpen(false);
                             }}
-                            className="w-full flex items-center space-x-3 px-3 py-2 text-white hover:bg-yellow-400/20 transition-colors rounded-md"
+                            className="w-full flex items-center space-x-2 xl:space-x-3 px-2 xl:px-3 py-1.5 xl:py-2 text-white hover:bg-yellow-400/20 transition-colors rounded-md"
                           >
-                            <span className="text-base">{lang.flag}</span>
-                            <span className="text-sm font-medium">{lang.name}</span>
+                            <span className="text-sm xl:text-base">{lang.flag}</span>
+                            <span className="text-xs xl:text-sm font-medium">{lang.name}</span>
                           </button>
                         ))}
                       </div>
@@ -217,47 +217,84 @@ export default function RootLayout({
                   <div id="google_translate_element" style={{position: 'absolute', left: '-9999px', opacity: 0}}></div>
                 </div>
                 <Link href="/courses">
-                  <Button className="bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold px-6 py-2 rounded-3xl hover:scale-105 transition-transform">
-                    Get Started <ArrowRight className="ml-2 w-4 h-4" />
+                  <Button className="bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold px-3 xl:px-6 py-1.5 xl:py-2 text-xs xl:text-sm rounded-2xl xl:rounded-3xl hover:scale-105 transition-transform">
+                    <span className="hidden xl:inline">Get Started</span>
+                    <span className="xl:hidden">Start</span>
+                    <ArrowRight className="ml-1 xl:ml-2 w-3 xl:w-4 h-3 xl:h-4" />
                   </Button>
                 </Link>
               </div>
 
-              {/* Mobile Menu Button */}
-              <div className="md:hidden">
+              {/* Tablet/Mobile Actions */}
+              <div className="flex items-center space-x-2 lg:hidden">
+                <div className="relative translate-dropdown hidden sm:block md:block">
+                  <button
+                    onClick={() => setIsTranslateOpen(!isTranslateOpen)}
+                    className="flex items-center bg-white/10 backdrop-blur-sm border border-yellow-400/30 rounded-lg p-2 text-white hover:bg-yellow-400/20 transition-all"
+                  >
+                    <Globe className="w-4 h-4 text-yellow-400" />
+                  </button>
+                  {isTranslateOpen && (
+                    <div className="absolute top-full mt-2 right-0 bg-black/95 backdrop-blur-md border border-yellow-400/30 rounded-lg shadow-xl min-w-[140px] z-50">
+                      <div className="p-1 space-y-1">
+                        {languages.map((lang) => (
+                          <button
+                            key={lang.code}
+                            onClick={() => {
+                              const combo = document.querySelector('.goog-te-combo') as HTMLSelectElement;
+                              if (combo) {
+                                combo.value = lang.code;
+                                combo.dispatchEvent(new Event('change'));
+                              }
+                              setCurrentLang(lang.name);
+                              setIsTranslateOpen(false);
+                            }}
+                            className="w-full flex items-center space-x-2 px-2 py-1.5 text-white hover:bg-yellow-400/20 transition-colors rounded-md"
+                          >
+                            <span className="text-sm">{lang.flag}</span>
+                            <span className="text-xs font-medium">{lang.name}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className="text-white hover:text-yellow-400 p-2"
+                  className="text-white hover:text-yellow-400 p-2 rounded-lg hover:bg-white/10 transition-all"
                 >
-                  {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                  {isMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
                 </button>
               </div>
             </div>
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-              <div className="md:hidden">
-                <div className="px-2 pt-2 pb-3 space-y-1 bg-black/90 backdrop-blur-md rounded-lg mt-2">
-                  <Link href="/" className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium" onClick={() => setIsMenuOpen(false)}>
-                    Home
-                  </Link>
-                  <Link href="/courses" className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium" onClick={() => setIsMenuOpen(false)}>
-                    Services
-                  </Link>
-                  <Link href="/gallery" className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium" onClick={() => setIsMenuOpen(false)}>
-                    Gallery
-                  </Link>
-                  <Link href="/about" className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium" onClick={() => setIsMenuOpen(false)}>
-                    About
-                  </Link>
-                  <div className="px-3 py-2 translate-dropdown">
-                    <div className="mb-3">
+              <div className="lg:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-b border-yellow-400/20 shadow-xl">
+                <div className="max-w-7xl mx-auto px-3 sm:px-4 py-4 space-y-3">
+                  <div className="space-y-1">
+                    <Link href="/" className="text-white hover:text-yellow-400 hover:bg-white/10 block px-4 py-3 text-base font-medium rounded-lg transition-all" onClick={() => setIsMenuOpen(false)}>
+                      Home
+                    </Link>
+                    <Link href="/courses" className="text-white hover:text-yellow-400 hover:bg-white/10 block px-4 py-3 text-base font-medium rounded-lg transition-all" onClick={() => setIsMenuOpen(false)}>
+                      Services
+                    </Link>
+                    <Link href="/gallery" className="text-white hover:text-yellow-400 hover:bg-white/10 block px-4 py-3 text-base font-medium rounded-lg transition-all" onClick={() => setIsMenuOpen(false)}>
+                      Gallery
+                    </Link>
+                    <Link href="/about" className="text-white hover:text-yellow-400 hover:bg-white/10 block px-4 py-3 text-base font-medium rounded-lg transition-all" onClick={() => setIsMenuOpen(false)}>
+                      About
+                    </Link>
+                  </div>
+                  
+                  <div className="border-t border-yellow-400/20 pt-3 sm:hidden translate-dropdown">
+                    <div className="mb-3 px-4">
                       <span className="text-white text-sm font-medium flex items-center">
                         <Globe className="w-4 h-4 text-yellow-400 mr-2" />
                         Select Language
                       </span>
                     </div>
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className="grid grid-cols-1 gap-2 px-4">
                       {languages.map((lang) => (
                         <button
                           key={lang.code}
@@ -269,19 +306,20 @@ export default function RootLayout({
                             }
                             setCurrentLang(lang.name);
                           }}
-                          className="flex items-center space-x-2 bg-white/10 border border-yellow-400/30 rounded-lg px-3 py-2 text-white hover:bg-yellow-400/20 transition-colors"
+                          className="flex items-center space-x-3 bg-white/10 border border-yellow-400/30 rounded-lg px-4 py-3 text-white hover:bg-yellow-400/20 transition-colors"
                         >
-                          <span className="text-sm">{lang.flag}</span>
-                          <span className="text-xs font-medium">{lang.name}</span>
+                          <span className="text-base">{lang.flag}</span>
+                          <span className="text-sm font-medium">{lang.name}</span>
                         </button>
                       ))}
                     </div>
                     <div id="google_translate_element_mobile" style={{position: 'absolute', left: '-9999px', opacity: 0}}></div>
                   </div>
-                  <div className="pt-4">
+                  
+                  <div className="border-t border-yellow-400/20 pt-3 px-4">
                     <Link href="/courses" onClick={() => setIsMenuOpen(false)}>
-                      <Button className="w-full bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold py-2 rounded-3xl">
-                        Get Started <ArrowRight className="ml-2 w-4 h-4" />
+                      <Button className="w-full bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold py-3 text-base rounded-2xl hover:scale-[1.02] transition-transform">
+                        Get Started <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
                     </Link>
                   </div>
@@ -293,41 +331,41 @@ export default function RootLayout({
         {children}
         
         {/* Footer */}
-        <footer className="bg-transparent backdrop-blur-md border-t border-yellow-400/20 mt-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <footer className="bg-transparent backdrop-blur-md border-t border-yellow-400/20 mt-8 sm:mt-12 lg:mt-16">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-6 sm:py-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {/* Contact Info */}
-              <div className="space-y-4">
-                <h3 className="text-white font-bold text-lg mb-4">Contact Us</h3>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Phone className="w-5 h-5 text-yellow-400" />
+              <div className="space-y-3 sm:space-y-4">
+                <h3 className="text-white font-bold text-base sm:text-lg mb-3 sm:mb-4">Contact Us</h3>
+                <div className="flex items-center space-x-2 sm:space-x-3 text-gray-300 text-sm sm:text-base">
+                  <Phone className="w-4 sm:w-5 h-4 sm:h-5 text-yellow-400 flex-shrink-0" />
                   <span>+250 788 429 419</span>
                 </div>
-                <div className="flex items-start space-x-3 text-gray-300">
-                  <MapPin className="w-5 h-5 text-yellow-400 mt-1" />
-                  <span>Kigali / Kicukiro / Kigarama / Rebero kk 794 st</span>
+                <div className="flex items-start space-x-2 sm:space-x-3 text-gray-300 text-sm sm:text-base">
+                  <MapPin className="w-4 sm:w-5 h-4 sm:h-5 text-yellow-400 mt-0.5 sm:mt-1 flex-shrink-0" />
+                  <span className="leading-relaxed">Kigali / Kicukiro / Kigarama / Rebero kk 794 st</span>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Mail className="w-5 h-5 text-yellow-400" />
-                  <span>kigalirevisioncenter@gmail.com</span>
+                <div className="flex items-start space-x-2 sm:space-x-3 text-gray-300 text-sm sm:text-base">
+                  <Mail className="w-4 sm:w-5 h-4 sm:h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
+                  <span className="break-all sm:break-normal">kigalirevisioncenter@gmail.com</span>
                 </div>
               </div>
               
               {/* Quick Links */}
-              <div className="space-y-4">
-                <h3 className="text-white font-bold text-lg mb-4">Quick Links</h3>
-                <div className="space-y-2">
-                  <Link href="/" className="block text-gray-300 hover:text-yellow-400 transition-colors">Home</Link>
-                  <Link href="/courses" className="block text-gray-300 hover:text-yellow-400 transition-colors">Services</Link>
-                  <Link href="/gallery" className="block text-gray-300 hover:text-yellow-400 transition-colors">Gallery</Link>
-                  <Link href="/about" className="block text-gray-300 hover:text-yellow-400 transition-colors">About</Link>
+              <div className="space-y-3 sm:space-y-4">
+                <h3 className="text-white font-bold text-base sm:text-lg mb-3 sm:mb-4">Quick Links</h3>
+                <div className="space-y-1 sm:space-y-2">
+                  <Link href="/" className="block text-gray-300 hover:text-yellow-400 transition-colors text-sm sm:text-base py-1">Home</Link>
+                  <Link href="/courses" className="block text-gray-300 hover:text-yellow-400 transition-colors text-sm sm:text-base py-1">Services</Link>
+                  <Link href="/gallery" className="block text-gray-300 hover:text-yellow-400 transition-colors text-sm sm:text-base py-1">Gallery</Link>
+                  <Link href="/about" className="block text-gray-300 hover:text-yellow-400 transition-colors text-sm sm:text-base py-1">About</Link>
                 </div>
               </div>
               
               {/* About */}
-              <div className="space-y-4">
-                <h3 className="text-white font-bold text-lg mb-4">Kigali Revision Center</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
+              <div className="space-y-3 sm:space-y-4 sm:col-span-2 lg:col-span-1">
+                <h3 className="text-white font-bold text-base sm:text-lg mb-3 sm:mb-4">Kigali Revision Center</h3>
+                <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
                   Empowering students through quality education and personalized learning experiences. 
                   Your success is our mission.
                 </p>
@@ -335,8 +373,8 @@ export default function RootLayout({
             </div>
             
             {/* Copyright */}
-            <div className="border-t border-yellow-400/20 mt-8 pt-6 text-center">
-              <p className="text-gray-400 text-sm">
+            <div className="border-t border-yellow-400/20 mt-6 sm:mt-8 pt-4 sm:pt-6 text-center">
+              <p className="text-gray-400 text-xs sm:text-sm">
                 © 2025 Kigali Revision Center. All rights reserved.
               </p>
             </div>

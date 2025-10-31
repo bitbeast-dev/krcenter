@@ -6,58 +6,58 @@ import { Users, Target, Award, Heart, ArrowRight,HandshakeIcon,ComputerIcon,Glob
 
 const AboutPage = () => {
   const stats = [
-    { number: "100+", label: "Students Enrolled", icon: Users },
-    { number: "75%", label: "Job Placement Rate", icon: Target },
-    { number: "10+", label: "Partner Companies", icon: Award },
-    { number: "50+", label: "Expert Instructors", icon: Heart }
+    { number: "200+", label: "Students Helped", icon: Users },
+    { number: "95%", label: "Grade Improvement", icon: Target },
+    { number: "15+", label: "Subject Areas", icon: Award },
+    { number: "25+", label: "Expert Tutors", icon: Heart }
   ];
 
   const team = [
     {
-      name: "Dr. Sarah Mitchell",
-      role: "Founder & CEO",
-      bio: "Former Google engineer with 15+ years in tech education. PhD in Computer Science from Stanford.",
+      name: "Jean Baptiste Uwimana",
+      role: "Founder & Director",
+      bio: "Experienced educator with 10+ years in academic excellence. Masters in Education from University of Rwanda.",
       image: "/team1.jpg"
     },
     {
-      name: "Michael Chen",
-      role: "Head of Curriculum",
-      bio: "Ex-Microsoft architect who designed curricula for top tech bootcamps. Specializes in full-stack development.",
+      name: "Marie Claire Mukamana",
+      role: "Head of Academics",
+      bio: "Former secondary school principal with expertise in curriculum development and student assessment.",
       image: "/team2.jpg"
     },
     {
-      name: "Dr. Lisa Wang",
-      role: "AI/ML Director",
-      bio: "Former Tesla AI researcher with expertise in machine learning and data science education.",
+      name: "Dr. Emmanuel Nkurunziza",
+      role: "Science & Math Director",
+      bio: "PhD in Mathematics with specialization in making complex concepts accessible to all learning levels.",
       image: "/team3.jpg"
     },
     {
-      name: "David Rodriguez",
-      role: "Career Services Director",
-      bio: "Former tech recruiter at Amazon and Facebook. Helped 1000+ developers land their dream jobs.",
+      name: "Grace Uwimana",
+      role: "Student Success Coordinator",
+      bio: "Dedicated counselor helping students achieve their academic goals and build confidence in learning.",
       image: "/team4.jpg"
     }
   ];
 
   const values = [
     {
-      title: "Accessibility First",
-      description: "Education should be free and accessible to everyone, regardless of background or financial situation.",
+      title: "Quality Education",
+      description: "Providing excellent educational support that meets each student's unique learning needs and goals.",
       icon: <Globe/>
     },
     {
-      title: "Industry Relevance",
-      description: "Our curriculum is constantly updated to match current industry demands and emerging technologies.",
+      title: "Academic Excellence",
+      description: "Our programs are designed to help students achieve outstanding results in their studies.",
       icon:<LucideMapPinCheckInside/>
     },
     {
-      title: "Practical Learning",
-      description: "Learn by building real projects that you can showcase to potential employers.",
+      title: "Personalized Learning",
+      description: "Tailored tutoring approaches that adapt to individual learning styles and academic requirements.",
       icon: <ComputerIcon/>
     },
     {
-      title: "Community Support",
-      description: "Join a supportive community of learners, mentors, and industry professionals.",
+      title: "Student Success",
+      description: "Creating a supportive environment where every student can thrive and reach their full potential.",
       icon: <HandshakeIcon/>
     }
   ];
@@ -68,12 +68,12 @@ const AboutPage = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-6">
-            About MindCraft
+            About Kigali Revision Center
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            We're on a mission to democratize tech education and bridge the gap between 
-            learning and employment. Founded in 2020, MindCraft Academy has helped thousands 
-            of students transform their careers through our comprehensive, industry-aligned programs.
+            We're dedicated to empowering students through quality education and personalized learning. 
+            Founded to bridge educational gaps, Kigali Revision Center has helped hundreds of students 
+            excel in their studies through our comprehensive tutoring and educational support programs.
           </p>
         </div>
 
@@ -104,10 +104,9 @@ const AboutPage = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-300 leading-relaxed">
-                To provide world-class, accessible tech education that empowers individuals 
-                to build successful careers in technology. We believe that with the right 
-                guidance and support, anyone can master the skills needed to thrive in the 
-                digital economy.
+                To provide exceptional educational support that empowers students to achieve 
+                academic excellence. We believe that with personalized guidance and quality 
+                tutoring, every student can unlock their potential and succeed in their studies.
               </p>
             </CardContent>
           </Card>
@@ -121,9 +120,9 @@ const AboutPage = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-300 leading-relaxed">
-                To become the global leader in practical tech education, creating a world 
-                where geographical location, financial background, or previous experience 
-                never limits someone's ability to build a successful career in technology.
+                To become Rwanda's premier educational support center, creating opportunities 
+                where every student, regardless of their starting point, can achieve academic 
+                success and build a strong foundation for their future.
               </p>
             </CardContent>
           </Card>
@@ -171,21 +170,20 @@ const AboutPage = () => {
           <h2 className="text-3xl font-bold text-center text-white mb-6">Our Story</h2>
           <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed space-y-4">
             <p>
-              MindCraft Academy was born from a simple observation: traditional education wasn't 
-              keeping pace with the rapidly evolving tech industry. Our founder, Dr. Sarah Mitchell, 
-              noticed that many talented individuals were being left behind due to barriers like 
-              cost, location, and outdated curricula.
+              Kigali Revision Center was founded with a clear vision: to provide quality educational 
+              support that helps students excel in their academic journey. Our founder, Jean Baptiste Uwimana, 
+              recognized that many bright students needed additional guidance to reach their full potential.
             </p>
             <p>
-              Starting with just 50 students in our first cohort, we've grown to serve over 10,000 
-              learners worldwide. Our success is measured not just in numbers, but in the lives 
-              we've transformed - from career changers landing their first tech jobs to experienced 
-              professionals advancing to senior roles.
+              Starting with just 20 students in our first year, we've grown to support hundreds of 
+              learners across Kigali. Our success is measured by the improved grades, increased confidence, 
+              and academic achievements of our students - from struggling learners becoming top performers 
+              to ambitious students reaching their dream universities.
             </p>
             <p>
-              Today, we partner with leading tech companies to ensure our graduates are job-ready 
-              from day one. Our unique combination of free courses and paid internships creates a 
-              clear pathway from learning to earning, making tech careers accessible to everyone.
+              Today, we offer comprehensive educational services including tutoring, exam preparation, 
+              creative skills development, and academic counseling. Our holistic approach ensures that 
+              every student receives the support they need to succeed academically and personally.
             </p>
           </div>
         </div>
@@ -196,12 +194,12 @@ const AboutPage = () => {
             Ready to Start Your Journey?
           </h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of students who have transformed their careers with MindCraft Academy. 
-            Your future in tech starts today.
+            Join hundreds of students who have achieved academic excellence with Kigali Revision Center. 
+            Your educational success starts today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold px-8 py-4 text-lg rounded-3xl hover:scale-105 transition-transform">
-              Start Learning Free
+              Explore Our Services
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button className="bg-transparent text-white border-2 border-yellow-400 font-bold px-8 py-4 text-lg rounded-3xl hover:bg-yellow-400/20 transition-all">
